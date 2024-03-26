@@ -11,6 +11,7 @@ class Cell:
         self._y1 = None
         self._y2 = None
         self._win = win
+        self.visited = False
 
     def draw(self, x1, y1, x2, y2):
         self._x1 = x1
@@ -71,4 +72,3 @@ class Cell:
             self._win.draw_line(line, fill_color)
             line = Line(Point(to_x_mid, to_y_mid), Point(to_x_mid, to_cell._y1))
             self._win.draw_line(line, fill_color)
-        
